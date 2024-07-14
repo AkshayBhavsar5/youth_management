@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import Select from 'react-select';
+import React, { useState } from "react";
+import Select from "react-select";
 
 function Register() {
   const [formData, setFormData] = useState({
-    fullName: '',
-    referenceName: '',
-    number: '',
-    dob: '',
-    address: '',
-    userType: '',
-    userDesignation: ''
+    fullName: "",
+    referenceName: "",
+    number: "",
+    dob: "",
+    address: "",
+    userType: "",
+    userDesignation: "",
   });
 
   const userTypeOptions = [
-    { value: 'Karyakrta', label: 'Karyakrta' },
-    { value: 'Yuvak', label: 'Yuvak' }
+    { value: "Karyakrta", label: "Karyakrta" },
+    { value: "Yuvak", label: "Yuvak" },
   ];
 
   const userDesignationOptions = [
-    { value: 'Student', label: 'Student' },
-    { value: 'Working Professional', label: 'Working Professional' }
+    { value: "Student", label: "Student" },
+    { value: "Working Professional", label: "Working Professional" },
   ];
 
   const handleChange = (name, selectedOption) => {
@@ -32,13 +32,15 @@ function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log('Form Data Submitted:', formData);
+    console.log("Form Data Submitted:", formData);
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-8">
       <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-4 text-center">User Registration</h1>
+        <h1 className="text-2xl font-bold mb-4 text-center">
+          User Registration
+        </h1>
         <form onSubmit={handleSubmit} className="space-y-4 text-left">
           <div>
             <label className="block text-sm font-medium text-gray-700">
@@ -115,8 +117,12 @@ function Register() {
               User Type:
               <Select
                 name="userType"
-                value={userTypeOptions.find(option => option.value === formData.userType)}
-                onChange={(selectedOption) => handleChange('userType', selectedOption)}
+                value={userTypeOptions.find(
+                  (option) => option.value === formData.userType
+                )}
+                onChange={(selectedOption) =>
+                  handleChange("userType", selectedOption)
+                }
                 options={userTypeOptions}
                 placeholder="Select user type"
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -128,8 +134,12 @@ function Register() {
               User Designation:
               <Select
                 name="userDesignation"
-                value={userDesignationOptions.find(option => option.value === formData.userDesignation)}
-                onChange={(selectedOption) => handleChange('userDesignation', selectedOption)}
+                value={userDesignationOptions.find(
+                  (option) => option.value === formData.userDesignation
+                )}
+                onChange={(selectedOption) =>
+                  handleChange("userDesignation", selectedOption)
+                }
                 options={userDesignationOptions}
                 placeholder="Select user designation"
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
