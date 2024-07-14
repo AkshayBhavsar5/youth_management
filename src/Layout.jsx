@@ -1,15 +1,14 @@
-import React from "react";
-import Header from "./components/Header/Header";
-import { Outlet } from "react-router-dom";
-import Dashboard from "./components/Dashboard/Dashboard";
-import Filtes from "./components/Dashboard/Filters/Filtes";
+import React from 'react'
+import Header from './components/Header/Header'
+import { Outlet } from 'react-router-dom'
+import BarChat from './components/BarChat/BarChat'
+
 function Layout() {
   return (
     <>
-      <Header />
-      <Outlet />
-      <Filtes />
-      <Dashboard />
+    <Header/>
+    <Outlet/>
+    
     </>
   );
 }

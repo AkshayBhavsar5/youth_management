@@ -2,11 +2,11 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import DataFeed from "./components/DataFeed/DataFeed";
-import Header from "./components/Header/Header";
-import Register from "./components/Register/Register";
+// import DataFeed from "./components/DataFeed/DataFeed";
+// import Header from "./components/Header/Header";
+// import Register from "./components/Register/Register";
 
-// import Chat from "./components/Chat/Chat"
+
 
 function App() {
 
