@@ -6,12 +6,15 @@ function Header() {
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-          Youth
+          <span>
+            <b className="md:text-blue-700 text-5xl">Y</b>
+          </span>
+          <span className="md:text-3xl cursor-pointer">outh</span>
         </span>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-2 px-2"
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 m-2 px-5"
           >
             <NavLink to="/Login">Login</NavLink>
           </button>
@@ -28,8 +31,8 @@ function Header() {
             aria-controls="navbar-cta"
             aria-expanded="false"
           >
-            <span class="sr-only">Open main menu</span>
-            <svg
+            {/* <span class="sr-only">Open main menu</span> */}
+            {/* <svg
               class="w-5 h-5"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +46,7 @@ function Header() {
                 stroke-width="2"
                 d="M1 1h15M1 7h15M1 13h15"
               />
-            </svg>
+            </svg> */}
           </button>
         </div>
         <div
@@ -54,7 +57,7 @@ function Header() {
             <li>
               <NavLink
                 to="/"
-                className="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
+                className="block py-2 px-3 md:p-0 text-black  bg-blue-700 rounded md:bg-transparent md:hover:text-blue-700  md:dark:text-blue-500 "
                 aria-current="page"
               >
                 Dashboard
@@ -63,7 +66,7 @@ function Header() {
             <li>
               <NavLink
                 to="/DataFeed"
-                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700   dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 "
               >
                 Data Feed
               </NavLink>
@@ -71,6 +74,7 @@ function Header() {
           </ul>
         </div>
       </div>
+      <hr className="text-blue-700 mx-16 text-bold" />
     </nav>
   );
 }

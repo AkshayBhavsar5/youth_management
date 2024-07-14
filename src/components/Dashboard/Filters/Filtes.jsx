@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Select from "react-select";
+import Dashboard from "../Dashboard";
 const Filtes = () => {
   const filters = ["Weekly", "Monthly", "Yearly"];
   const place = ["Home", "Outside"];
@@ -8,8 +9,8 @@ const Filtes = () => {
 
   return (
     <>
-      <div className="md:flex justify-start items-center">
-        <div className="md:px-44">
+      <div className="md:flex justify-start items-center py-5">
+        <div className="md:px-24">
           <label htmlFor="" className="text-2xl">
             <b>Select type:</b>
           </label>
@@ -44,6 +45,7 @@ const Filtes = () => {
           </select>
         </div>
       </div>
+      <Dashboard />
     </>
   );
 };
