@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Login from './components/ui/Login'
+import Login from './components/Login/Login'
+import Header from './components/Header/Header'
+import Register from './components/Register/Register'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,7 +10,9 @@ function App() {
   return (
     <>
     <div className='px-2'>
+      <Register/>
       <Login/>
+      <Header/>
     </div>
     </>
   )

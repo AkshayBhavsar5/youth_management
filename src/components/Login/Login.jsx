@@ -3,10 +3,8 @@ import React, { useState } from 'react';
 
 function Login() {
   const [formData, setFormData] = useState({
-    name: '',
-    number: '',
-    date: '',
-    dob: '',
+    username: '',
+    password: '',
   });
 
   const handleChange = (e) => {
@@ -30,27 +28,13 @@ function Login() {
         <form onSubmit={handleSubmit} className="space-y-4 text-left">
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              Name:
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Enter your name"
-                required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              />
-            </label>
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Number:
+              Username (Phone Number):
               <input
                 type="tel"
-                name="number"
-                value={formData.number}
+                name="username"
+                value={formData.username}
                 onChange={handleChange}
-                placeholder="Enter your number"
+                placeholder="Enter your phone number"
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               />
@@ -58,27 +42,13 @@ function Login() {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              Date:
+              Password:
               <input
-                type="date"
-                name="date"
-                value={formData.date}
+                type="password"
+                name="password"
+                value={formData.password}
                 onChange={handleChange}
-                placeholder="Enter the date"
-                required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              />
-            </label>
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Date of Birth:
-              <input
-                type="date"
-                name="dob"
-                value={formData.dob}
-                onChange={handleChange}
-                placeholder="Enter your date of birth"
+                placeholder="Enter your password"
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               />
@@ -88,7 +58,7 @@ function Login() {
             type="submit"
             className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
-            Login
+            Submit
           </button>
         </form>
       </div>
