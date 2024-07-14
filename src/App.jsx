@@ -10,9 +10,10 @@ function App() {
   return (
     <>
     <div className='px-2'>
+      <Header />
       <Register/>
       <Login/>
-      <Header/>
+      
     </div>
     </>
   )
