@@ -19,12 +19,12 @@ const router = createBrowserRouter([
         element:<BarChat/>
       },
       {
-        path:"Login",
-        element:<Login />
+        path: "Login",
+        element: <Login />,
       },
       {
-        path:"Register",
-        element:<Register />
+        path: "Register",
+        element: <Register />,
       },
       {
         path:"DataFeed",

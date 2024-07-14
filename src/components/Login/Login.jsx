@@ -1,10 +1,10 @@
 // src/Login.js
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Login() {
   const [formData, setFormData] = useState({
-    username: '',
-    password: '',
+    username: "",
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -18,11 +18,11 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log('Form Data Submitted:', formData);
+    console.log("Form Data Submitted:", formData);
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 ">
       <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold mb-4 text-center">User Login Page</h1>
         <form onSubmit={handleSubmit} className="space-y-4 text-left">
