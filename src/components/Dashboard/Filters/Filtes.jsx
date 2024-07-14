@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Select from "react-select"; // Import react-select
+import Select from "react-select";
 const Filtes = () => {
   const filters = ["Weekly", "Monthly", "Yearly"];
   const place = ["Home", "Outside"];
@@ -8,8 +8,8 @@ const Filtes = () => {
 
   return (
     <>
-      <div className="flex justify-start items-center">
-        <div className="px-10">
+      <div className="md:flex justify-start items-center">
+        <div className="md:px-44">
           <label htmlFor="" className="text-2xl">
             <b>Select type:</b>
           </label>
