@@ -2,17 +2,21 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import DataFeed from "./components/ui/DataFeed";
+import DataFeed from "./components/DataFeed/DataFeed";
+import Header from "./components/Header/Header";
+import Register from "./components/Register/Register";
+import Login from "./components/Login/Login";
+// import Chat from "./components/Chat/Chat"
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>
-      <div className="px-2">
-        <button>click me</button>
-        <DataFeed />
-      </div>
+      {/* <div className="">
+        <Header/>
+        <Register/>
+        {/* <Chat/> */}
+      {/* </div> */}
     </>
   );
 }
