@@ -8,13 +8,16 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Register from './components/Register/Register.jsx'
 import DataFeed from './components/DataFeed/DataFeed.jsx'
 import Login from './components/Login/Login.jsx'
-
+import BarChat from './components/BarChat/BarChat.jsx'
 
 const router = createBrowserRouter([
   {
     path:"/",
-    element:<Layout />,
+    element:<Layout/>,
     children:[
+      { path :"",
+        element:<BarChat/>
+      },
       {
         path:"Login",
         element:<Login />
@@ -26,16 +29,12 @@ const router = createBrowserRouter([
       {
         path:"DataFeed",
         element:<DataFeed />
-      }
-      // {
-      //   path:"DataFeed",
-      //   element:</>
-      // }
+      },
     ]
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />d:\project\React.js\05ReactRouter\src\Layout.jsx
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
