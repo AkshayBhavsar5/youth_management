@@ -1,5 +1,5 @@
-// src/Login.js
 import React, { useState } from 'react';
+import Select from 'react-select';
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -7,14 +7,25 @@ function Register() {
     referenceName: '',
     number: '',
     dob: '',
-    address: ''
+    address: '',
+    userType: '',
+    userDesignation: ''
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  const userTypeOptions = [
+    { value: 'Karyakrta', label: 'Karyakrta' },
+    { value: 'Yuvak', label: 'Yuvak' }
+  ];
+
+  const userDesignationOptions = [
+    { value: 'Student', label: 'Student' },
+    { value: 'Working Professional', label: 'Working Professional' }
+  ];
+
+  const handleChange = (name, selectedOption) => {
     setFormData({
       ...formData,
-      [name]: value,
+      [name]: selectedOption.value,
     });
   };
 
@@ -27,7 +38,7 @@ function Register() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-4 text-center">User Registration </h1>
+        <h1 className="text-2xl font-bold mb-4 text-center">User Registration</h1>
         <form onSubmit={handleSubmit} className="space-y-4 text-left">
           <div>
             <label className="block text-sm font-medium text-gray-700">
@@ -36,7 +47,7 @@ function Register() {
                 type="text"
                 name="fullName"
                 value={formData.fullName}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e.target.name, e.target.value)}
                 placeholder="Enter your full name"
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -50,7 +61,7 @@ function Register() {
                 type="text"
                 name="referenceName"
                 value={formData.referenceName}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e.target.name, e.target.value)}
                 placeholder="Enter your reference name"
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -64,7 +75,7 @@ function Register() {
                 type="tel"
                 name="number"
                 value={formData.number}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e.target.name, e.target.value)}
                 placeholder="Enter your number"
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -78,7 +89,7 @@ function Register() {
                 type="date"
                 name="dob"
                 value={formData.dob}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e.target.name, e.target.value)}
                 placeholder="Enter your date of birth"
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -92,9 +103,35 @@ function Register() {
                 type="text"
                 name="address"
                 value={formData.address}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e.target.name, e.target.value)}
                 placeholder="Enter your address"
                 required
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </label>
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              User Type:
+              <Select
+                name="userType"
+                value={userTypeOptions.find(option => option.value === formData.userType)}
+                onChange={(selectedOption) => handleChange('userType', selectedOption)}
+                options={userTypeOptions}
+                placeholder="Select user type"
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+            </label>
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              User Designation:
+              <Select
+                name="userDesignation"
+                value={userDesignationOptions.find(option => option.value === formData.userDesignation)}
+                onChange={(selectedOption) => handleChange('userDesignation', selectedOption)}
+                options={userDesignationOptions}
+                placeholder="Select user designation"
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               />
             </label>
