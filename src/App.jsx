@@ -5,7 +5,7 @@ import "./App.css";
 import DataFeed from "./components/DataFeed/DataFeed";
 import Header from "./components/Header/Header";
 import Register from "./components/Register/Register";
-import Login from "./components/Login/Login";
+
 // import Chat from "./components/Chat/Chat"
 
 function App() {
