@@ -5,10 +5,11 @@ const Filtes = () => {
   const filters = ["Weekly", "Monthly", "Yearly"];
   const place = ["Home", "Outside"];
   const [filter, setFilter] = useState();
-
+  
   return (
     <>
       <div className="md:flex justify-start items-center">
+    
         <div className="md:px-44">
           <label htmlFor="" className="text-2xl">
             <b>Select type:</b>
