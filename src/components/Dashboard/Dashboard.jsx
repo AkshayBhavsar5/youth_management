@@ -1,8 +1,5 @@
 import React from "react";
 
-<<<<<<< HEAD
-
-=======
 const cards = [
   {
     title: "Karyakata with Yuva Seva",
@@ -52,7 +49,6 @@ function Card(props) {
     </div>
   );
 }
->>>>>>> 0260be6c1c2c853d1c254980f2225bf8aff0ac44
 
 function Dashboard() {
   return (

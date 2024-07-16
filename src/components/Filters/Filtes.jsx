@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 import Select from "react-select";
-import Dashboard from "../Dashboard";
+import Dashboard from "../Dashboard/Dashboard";
+import BarChat from "../BarChat/BarChat";
 const Filtes = () => {
   const filters = ["Weekly", "Monthly", "Yearly"];
   const place = ["Home", "Outside"];
@@ -46,6 +47,7 @@ const Filtes = () => {
         </div>
       </div>
       <Dashboard />
+      <BarChat/>
     </>
   );
 };

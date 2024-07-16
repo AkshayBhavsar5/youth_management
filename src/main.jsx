@@ -4,11 +4,10 @@ import App from './App.jsx'
 import './index.css'
 import Layout from './Layout.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-
+import Filtes from './components/Filters/Filtes.jsx'
 import Register from './components/Register/Register.jsx'
 import DataFeed from './components/DataFeed/DataFeed.jsx'
 import Login from './components/Login/Login.jsx'
-import BarChat from './components/BarChat/BarChat.jsx'
 
 const router = createBrowserRouter([
   {
@@ -16,11 +15,11 @@ const router = createBrowserRouter([
     element:<Layout/>,
     children:[
       { path :"",
-        element:<BarChat/>
+        element:<Filtes/>
       },
       {
         path: "Login",
-        element: <Login />,
+        element: <Login/>,
       },
       {
         path: "Register",
