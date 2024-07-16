@@ -3,37 +3,6 @@ import Chart from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 
 import Select from "react-select"; // Import react-select
-<<<<<<< HEAD
-import Filtes from '../Dashboard/Filters/Filtes';
-  
-
-function BarChat() {
-  return (
-    
-    
-    <>    
-    <div className=' flex flex-wrap justify-between'>
-      <div>
-      <Filtes/>
-      </div>
-    
-      <div className=' w-20rem h-full md:w-8/12 mx-auto'>
-        <Bar
-          data={{
-            labels: ["Akshay", "saju", "rakesh"],
-            datasets: [
-              {
-                label: "name",
-                data: [100, 200, 300],
-              },
-            ],
-          }}
-          options={{
-            responsive: true,
-            maintainAspectRatio: false,
-          }}
-        />
-=======
 import Filtes from "../Dashboard/Filters/Filtes";
 
 function BarChat() {
@@ -60,13 +29,11 @@ function BarChat() {
           />
         </div>
         <div className="w-full h-4/5 md:w-6/12 mx-auto"></div>
->>>>>>> 0260be6c1c2c853d1c254980f2225bf8aff0ac44
       </div>
     </>
   );
 }
 
-<<<<<<< HEAD
 export default BarChat
 
 
@@ -114,6 +81,3 @@ function Card(props) {
     </div>
   );
 }
-=======
-export default BarChat;
->>>>>>> 0260be6c1c2c853d1c254980f2225bf8aff0ac44
